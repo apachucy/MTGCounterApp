@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- defaults -->
+    <dimen name="text_view_margin">20dp</dimen>
+    <dimen name="text_view_margin_small">5dp</dimen>
+    <dimen name="image_view_margin">10dp</dimen>
+    <dimen name="button_margin">10dp</dimen>
+
+    <!-- EditText dimen -->
+    <dimen name="edit_text_width">150dp</dimen>
+    <dimen name="settings_edit_text_width">60dp</dimen>
+    <!-- defaults -->
+    <dimen name="standard_margin">15dp</dimen>
+    <dimen name="text_view_margin_settings">20dp</dimen>
+    <dimen name="text_view_margin_settings_small">5dp</dimen>
+    <dimen name="item_body_text_view_padding">4dp</dimen>
+    <dimen name="button_margin_settings">10dp</dimen>
+    <dimen name="edit_text_margin_settings">5dp</dimen>
+
+    <!-- Style -->
+    <dimen name="button_padding">5dp</dimen>
+    <dimen name="button_padding_small">1dp</dimen>
+    <dimen name="text_view_padding_small">1dp</dimen>
+    <dimen name="text_view_padding">5dp</dimen>
+
+    <!-- Style drawable -->
+    <dimen name="radius_big">5dp</dimen>
+    <dimen name="stroke_width_big">5dp</dimen>
+    <dimen name="radius_small">2dp</dimen>
+    <dimen name="stroke_width_small">2dp</dimen>
+
+    <!-- GridView -->
+    <dimen name="vertical_spacing">5dp</dimen>
+</resources>

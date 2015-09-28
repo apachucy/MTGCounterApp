@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="warning_only_input_digits">Wprowadź tylko liczby</string>
+    <string name="app_name">MTG Life Counter</string>
+    <string name="item_player_name">Gracz</string>
+    <string name="item_player_life">20</string>
+    <string name="item_player_poison">0</string>
+    <string name="game_start_counting">Start</string>
+    <string name="game_start_counter">Żeby włączyć licznik czasu naciśnij start</string>
+    <!-- Menu Settings -->
+    <string name="settings_startLife">Ustaw życie</string>
+    <string name="settings_rollDice">Rzuć kostką</string>
+    <string name="settings_gameTime">Ustaw czas gry</string>
+    <string name="settings_addPlayer">Dodaj gracza</string>
+    <string name="settings_info">Informacje</string>
+    <!-- Dialog fragments -->
+    <string name="dialog_fragment_lifeTitle">Startowe życie</string>
+    <string name="dialog_fragment_lifeMessage">Ustaw życie na start</string>
+    <string name="dialog_fragment_rollTitle">Rzuć kostką</string>
+    <string name="dialog_fragment_rollMessage">Wybierz kostkę do rzucenia</string>
+    <string name="dialog_fragment_rolledValue">Wyrzucono: </string>
+    <string name="dialog_button_roll">Rzuć</string>
+    <string name="dialog_button_cancel">Anuluj</string>
+    <string name="dialog_button_set">Ustaw</string>
+    <string name="dialog_button_add">Dodaj</string>
+    <string name="dialog_button_change">Zmień</string>
+    <string name="dialog_fragment_playerTitle">Dodaj gracza</string>
+    <string name="dialog_fragment_playerMessage">Imię gracza:</string>
+    <string name="dialog_fragment_timerTitle">Czas gry</string>
+    <string name="dialog_fragment_timerMessage">Czas gry [m]:</string>
+    <string name="dialog_fragment_changePlayerTitle">Zmień nazwę gracza</string>
+    <string name="dialog_fragment_info_title">Informacje</string>
+    <string name="dialog_fragment_info_message">Fanowska wersja licznika życia MTG\nWykorzystano: ShowcaseLibrary\nGrafiki: Soqu </string>
+    <!-- help view  strings -->
+    <string name="help_button_title">Rozpocznij odliczanie</string>
+    <string name="help_button_message">Aby rozpocząć odliczanie do końca rundy\nnaciśnij przycisk</string>
+    <string name="help_button_action_next">Dalej</string>
+    <string name="help_button_action_end">Zamknij</string>
+    <string name="help_list_title">Gracze</string>
+    <string name="help_list_message">Aby zmienić nazwy graczy naciśnij na nie,\n1wszy licznik pokazuje życie\n2gi licznik pokazuje stan zatrucia\naby zmienić ich wartości o 1 naciśnij na "plus lub minus" lub przytrzymaj aby zmienić wartość o 5 &#8230;</string>
+    <string name="help_menu_title">Menu</string>
+    <string name="help_menu_message">Po więcej opcji zerkni do menu!\nMiłej zabawy z przyjaciółmi! ;)</string>
+
+</resources>

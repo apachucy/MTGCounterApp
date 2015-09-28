@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- defaults -->
+    <dimen name="text_view_margin">42dp</dimen>
+    <dimen name="text_view_margin_small">11dp</dimen>
+    <dimen name="image_view_margin">21dp</dimen>
+    <dimen name="button_margin">21dp</dimen>
+
+    <!-- EditText dimen -->
+    <dimen name="edit_text_width">315dp</dimen>
+    <dimen name="settings_edit_text_width">127dp</dimen>
+    <!-- defaults -->
+    <dimen name="standard_margin">31dp</dimen>
+    <dimen name="text_view_margin_settings">42dp</dimen>
+    <dimen name="text_view_margin_settings_small">11dp</dimen>
+    <dimen name="item_body_text_view_padding">8dp</dimen>
+    <dimen name="button_margin_settings">21dp</dimen>
+    <dimen name="edit_text_margin_settings">11dp</dimen>
+
+
+</resources>

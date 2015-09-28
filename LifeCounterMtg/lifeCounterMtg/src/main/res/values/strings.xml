@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="warning_only_input_digits">Please input only digits</string>
+    <string name="app_name">MTG Life Counter</string>
+    <string name="item_player_name">Player</string>
+    <string name="item_player_life">20</string>
+    <string name="item_player_poison">0</string>
+    <string name="game_start_counting">Start</string>
+    <string name="game_start_counter">To see elapsed time press start</string>
+    <!-- Menu Settings -->
+    <string name="settings_startLife">Set Lifes</string>
+    <string name="settings_rollDice">Roll Dice</string>
+    <string name="settings_gameTime">Time of Game</string>
+    <string name="settings_addPlayer">Add Player</string>
+    <string name="settings_info">Info</string>
+    <!-- Dialog fragments -->
+    <string name="dialog_fragment_lifeTitle">Players life at start</string>
+    <string name="dialog_fragment_lifeMessage">Set start life</string>
+    <string name="dialog_fragment_rollTitle">Roll a dice</string>
+    <string name="dialog_fragment_rollMessage">Choose a dice and roll</string>
+    <string name="dialog_fragment_rolledValue">Rolled: </string>
+    <string name="dialog_button_roll">Roll</string>
+    <string name="dialog_button_cancel">Cancel</string>
+    <string name="dialog_button_set">Set</string>
+    <string name="dialog_button_add">Add</string>
+    <string name="dialog_button_change">Change</string>
+    <string name="dialog_fragment_playerTitle">Add new player</string>
+    <string name="dialog_fragment_playerMessage">Player name:</string>
+    <string name="dialog_fragment_timerTitle">Set time of a game</string>
+    <string name="dialog_fragment_timerMessage">Game time [m]:</string>
+    <string name="dialog_fragment_changePlayerTitle">Change player name</string>
+	<string name="dialog_fragment_info_title">Info</string>
+    <string name="dialog_fragment_info_message">Funsite version of Life counter for MTG game\nUsed: ShowcaseLibrary\nGraphic by: Soqu </string>
+    <!-- help view  strings -->
+    <string name="help_button_title">Start Timer</string>
+    <string name="help_button_message">To start timer press start button\nRound countdown will start</string>
+    <string name="help_button_action_next">Next</string>
+    <string name="help_button_action_end">Close</string>
+    <string name="help_list_title">Players</string>
+    <string name="help_list_message">To change name of player press on it,\n1rst counter is life counter\n2nd counter is a poison counter\nto change value of it press "plus or minus" to change value by 1 or long press to change by 5 &#8230;</string>
+    <string name="help_menu_title">Menu</string>
+    <string name="help_menu_message">Check menu for more option!\nHave fun playing with friends! ;)</string>
+
+</resources>
