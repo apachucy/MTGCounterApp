@@ -6,7 +6,7 @@
 
 
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -14,6 +14,18 @@
 
 
         -->
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/accent</item>
+
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="windowActionBar">false</item>
     </style>
 
     <!-- Application theme. -->
@@ -22,11 +34,11 @@
     </style>
     <!-- Background for all views -->
     <style name="background">
-        <item name="android:background">@drawable/layout_background</item>
+        <item name="android:background">@color/windowBackground</item>
     </style>
 
     <style name="background.dialog">
-        <item name="android:background">@drawable/spinner_background</item>
+
     </style>
     
     <!-- Button Normal-->
@@ -48,7 +60,7 @@
     </style>
     <!-- Text View -->
     <style name="textView" parent="@android:style/Widget.TextView">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="textView.dialog">
@@ -63,6 +75,9 @@
     <style name="editText.settings" >
         <item name="android:layout_width">@dimen/settings_edit_text_width</item>
     </style>
-
+    <style name="toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 
 </resources>

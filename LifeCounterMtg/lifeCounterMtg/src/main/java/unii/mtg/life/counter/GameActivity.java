@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import unii.mtg.life.counter.config.BaseConfig;
 import unii.mtg.life.counter.pojo.GameSettings;
 import unii.mtg.life.counter.pojo.Player;
@@ -18,6 +20,8 @@ import unii.mtg.life.counter.view.fragments.CustomDialogSpinnerFragment;
 import unii.mtg.life.counter.view.timer.CounterClass;
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,7 +39,7 @@ import android.widget.Toast;
  * @author Arkadiusz Pachucy
  * 
  */
-public class GameActivity extends Activity {
+public class GameActivity extends ActionBarActivity {
 
 	private GridView mPlayerGridView;
 	private TextView mTimerTextView;
@@ -71,6 +75,9 @@ public class GameActivity extends Activity {
 	private static GameSettings sRunSettings;
 	private CounterClass mTimer;
 
+
+	@Bind(R.id.toolbar)
+	Toolbar mToolBar;
 	// help library
 	//private ShowcaseView mShowcaseView;
 	//private int mShowCaseID = 144;
@@ -79,6 +86,7 @@ public class GameActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game);
+		ButterKnife.bind(this);
 
 		mPlayerGridView = (GridView) findViewById(R.id.activity_game_playerGridLayout);
 		mTimerTextView = (TextView) findViewById(R.id.activity_game_timerTextView);
@@ -124,6 +132,13 @@ public class GameActivity extends Activity {
 */
 		mTimerTextView.setText(populateTimerAtStart((long) (sRunSettings
 				.getGameTimeInMin() * BaseConfig.DEFAULT_TIME_MINUT)));
+
+		setSupportActionBar(mToolBar);
+		mToolBar.setLogo(R.drawable.ic_launcher);
+		mToolBar.setLogoDescription(R.string.app_name);
+		mToolBar.setTitleTextColor(getResources().getColor(R.color.white));
+		mToolBar.setTitle(R.string.app_name);
+
 	}
 
 	private String populateTimerAtStart(long millis) {
@@ -136,6 +151,8 @@ public class GameActivity extends Activity {
 				TimeUnit.MILLISECONDS.toSeconds(millis)
 						- TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS
 								.toMinutes(millis)));
+
+
 
 	}
 
