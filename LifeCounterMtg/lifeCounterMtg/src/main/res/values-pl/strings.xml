@@ -41,5 +41,9 @@
     <string name="help_list_message">Aby zmienić nazwy graczy naciśnij na nie,\n1wszy licznik pokazuje życie\n2gi licznik pokazuje stan zatrucia\naby zmienić ich wartości o 1 naciśnij na "plus lub minus" lub przytrzymaj aby zmienić wartość o 5 &#8230;</string>
     <string name="help_menu_title">Menu</string>
     <string name="help_menu_message">Po więcej opcji zerkni do menu!\nMiłej zabawy z przyjaciółmi! ;)</string>
+    <string name="help_dice">Rzuć kostką</string>
+    <string name="help_life">Ustaw startowe życie</string>
+    <string name="help_person">Dodaj nowego zawodnika\n Żeby zmienić imię zawodnika naciśnij na nie</string>
+    <string name="help_title">Pomoc</string>
 
 </resources>

@@ -197,7 +197,7 @@ public class CustomDialogSpinnerFragment extends DialogFragment implements
 	 * @overload
 	 * @param manager
 	 * @param tag
-	 * @param onClick
+	 *
 	 *            action when click on button
 	 */
 	public void show(FragmentManager manager, String tag,

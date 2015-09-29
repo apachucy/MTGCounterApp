@@ -17,7 +17,7 @@
     <dimen name="standard_margin">15dp</dimen>
     <dimen name="text_view_margin_settings">20dp</dimen>
     <dimen name="text_view_margin_settings_small">5dp</dimen>
-    <dimen name="item_body_text_view_padding">4dp</dimen>
+    <dimen name="item_body_text_view_padding">12dp</dimen>
     <dimen name="button_margin_settings">10dp</dimen>
     <dimen name="edit_text_margin_settings">5dp</dimen>
 

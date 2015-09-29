@@ -1,6 +1,5 @@
 package unii.mtg.life.counter.view.adapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,12 +23,12 @@ import unii.mtg.life.counter.view.OnElementClick;
  */
 public class GridPlayersRecyclerAdapter extends RecyclerView.Adapter<GridPlayersRecyclerAdapter.ViewHolder> {
     private List<Player> mPlayerList;
-    private Context mContext;
+
 
     private OnElementClick mPlayerNameListener;
 
-    public GridPlayersRecyclerAdapter(Context context, List<Player> playerList) {
-        mContext = context;
+    public GridPlayersRecyclerAdapter( List<Player> playerList) {
+
         mPlayerList = playerList;
     }
 

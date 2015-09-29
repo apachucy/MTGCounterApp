@@ -1,5 +1,21 @@
 package unii.mtg.life.counter;
 
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -26,22 +42,6 @@ import unii.mtg.life.counter.view.fragments.CustomDialogFragment;
 import unii.mtg.life.counter.view.fragments.CustomDialogSpinnerFragment;
 import unii.mtg.life.counter.view.timer.CounterClass;
 
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 
 /**
  * @author Arkadiusz Pachucy
@@ -50,9 +50,9 @@ public class GameActivity extends ActionBarActivity {
 
 
     @Bind(R.id.activity_game_timerTextView)
-     TextView mTimerTextView;
+    TextView mTimerTextView;
     @Bind(R.id.activity_game_timerButton)
-     Button mTimerStartButton;
+    Button mTimerStartButton;
     @Bind(R.id.activity_game_playersRecyclerView)
     RecyclerView mRecyclerView;
 
@@ -104,8 +104,6 @@ public class GameActivity extends ActionBarActivity {
         ButterKnife.bind(this);
 
 
-
-
         // add default two players
         int playerNumber = 1;
         Player player1 = new Player(getString(R.string.item_player_name)
@@ -132,7 +130,7 @@ public class GameActivity extends ActionBarActivity {
 
         mLayoutManager = new GridLayoutManager(this, 2);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mPlayerRecyclerAdapter = new GridPlayersRecyclerAdapter(this, mPlayerList);
+        mPlayerRecyclerAdapter = new GridPlayersRecyclerAdapter(mPlayerList);
         mPlayerRecyclerAdapter.setPlayerNameListener(mOnElementClick);
 
 
@@ -274,6 +272,7 @@ public class GameActivity extends ActionBarActivity {
             }
         });
     }
+
     private String populateTimerAtStart(long millis) {
         return String.format(
                 "%02d:%02d:%02d",
@@ -302,7 +301,7 @@ public class GameActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             mOnSetEditTextListener = (EditTextDialogFragmentActionListener) mCustomEditTextDialogFragment;
-            // check if only digist are entered
+            // check if only digits are entered
             String regexOnlyDigitsPattern = "[0-9]+";
             if (mOnSetEditTextListener.getTextInEditText().matches(
                     regexOnlyDigitsPattern)) {
@@ -314,13 +313,17 @@ public class GameActivity extends ActionBarActivity {
                 mTimerStartButton.setVisibility(View.VISIBLE);
                 if (mTimer != null) {
                     mTimer.cancel();
+
                 }
+                mTimerTextView.setText(populateTimerAtStart(sRunSettings.getGameTimeInMin() * BaseConfig.DEFAULT_TIME_MINUT));
             } else {
                 Toast.makeText(GameActivity.this,
                         getString(R.string.warning_only_input_digits),
                         Toast.LENGTH_SHORT).show();
 
             }
+
+
         }
     };
 
@@ -361,7 +364,7 @@ public class GameActivity extends ActionBarActivity {
             int diceValue = Integer.parseInt(mOnSetValueListener
                     .getSpinnerValue());
             mOnSetValueListener.getRollTextView().setText(
-                    getString(R.string.dialog_fragment_rolledValue)
+                    getString(R.string.dialog_fragment_rolledValue)+" "
                             + rollDice(diceValue));
 
         }

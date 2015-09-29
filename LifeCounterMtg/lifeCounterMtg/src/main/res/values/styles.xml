@@ -66,6 +66,7 @@
     <style name="textView.dialog">
         <item name="android:padding">@dimen/text_view_padding</item>
         <item name="android:textColor">@color/blue_dark</item>
+        <item name="android:background">@color/windowBackground</item>
     </style>
     <!-- Edit Text -->
     <style name="editText" parent="@android:style/Widget.EditText">
