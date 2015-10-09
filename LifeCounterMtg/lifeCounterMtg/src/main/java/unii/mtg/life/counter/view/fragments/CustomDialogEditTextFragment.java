@@ -190,7 +190,7 @@ public class CustomDialogEditTextFragment extends DialogFragment implements
 	 * @overload
 	 * @param manager
 	 * @param tag
-	 * @param onClick
+	 *
 	 *            action when click on button
 	 */
 	public void show(FragmentManager manager, String tag,
@@ -215,5 +215,7 @@ public class CustomDialogEditTextFragment extends DialogFragment implements
 	public void setTextInEditText(String text) {
 		mEditText.setText(text);
 	}
+
+
 
 }

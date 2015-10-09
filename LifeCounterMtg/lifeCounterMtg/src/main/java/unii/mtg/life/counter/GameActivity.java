@@ -1,5 +1,6 @@
 package unii.mtg.life.counter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -332,11 +333,19 @@ public class GameActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             mOnSetEditTextListener = (EditTextDialogFragmentActionListener) mCustomEditTextDialogFragment;
-            mPlayerList.add(new Player(mOnSetEditTextListener
-                    .getTextInEditText(), sRunSettings.getStartingLife(), 0));
-            mPlayerRecyclerAdapter.notifyDataSetChanged();
-            mOnSetEditTextListener.clearEditText();
-            mCustomEditTextDialogFragment.dismiss();
+            String playerName = mOnSetEditTextListener
+                    .getTextInEditText();
+            if (playerName.trim().equals("")) {
+                Toast.makeText(GameActivity.this, getString(R.string.dialog_fragment_error_name_empty), Toast.LENGTH_SHORT).show();
+            } else if (!validatePlayerName(playerName)) {
+                Toast.makeText(GameActivity.this, getString(R.string.dialog_fragment_error_name_used), Toast.LENGTH_SHORT).show();
+            } else {
+                mPlayerList.add(new Player(playerName, sRunSettings.getStartingLife(), 0));
+                mPlayerRecyclerAdapter.notifyDataSetChanged();
+                mOnSetEditTextListener.clearEditText();
+                mCustomEditTextDialogFragment.dismiss();
+            }
+
         }
     };
 
@@ -364,7 +373,7 @@ public class GameActivity extends ActionBarActivity {
             int diceValue = Integer.parseInt(mOnSetValueListener
                     .getSpinnerValue());
             mOnSetValueListener.getRollTextView().setText(
-                    getString(R.string.dialog_fragment_rolledValue)+" "
+                    getString(R.string.dialog_fragment_rolledValue) + " "
                             + rollDice(diceValue));
 
         }
@@ -414,11 +423,18 @@ public class GameActivity extends ActionBarActivity {
                         @Override
                         public void onClick(View v) {
                             mOnSetEditTextListener = (EditTextDialogFragmentActionListener) mCustomEditTextDialogFragment;
-                            mPlayerList.get(position).setPlayerName(
-                                    mOnSetEditTextListener.getTextInEditText());
-                            mPlayerRecyclerAdapter.notifyDataSetChanged();
-                            mOnSetEditTextListener.clearEditText();
-                            mCustomEditTextDialogFragment.dismiss();
+                            String newPlayerName = mOnSetEditTextListener.getTextInEditText();
+                            if (newPlayerName.trim().equals("")) {
+                                Toast.makeText(GameActivity.this, getString(R.string.dialog_fragment_error_name_empty), Toast.LENGTH_SHORT).show();
+                            } else if (!validatePlayerName(newPlayerName)) {
+                                Toast.makeText(GameActivity.this, getString(R.string.dialog_fragment_error_name_used), Toast.LENGTH_SHORT).show();
+                            } else {
+                                mPlayerList.get(position).setPlayerName(
+                                        newPlayerName);
+                                mPlayerRecyclerAdapter.notifyDataSetChanged();
+                                mOnSetEditTextListener.clearEditText();
+                                mCustomEditTextDialogFragment.dismiss();
+                            }
                         }
                     }, mNegativeClick);
             mCustomEditTextDialogFragment.show(getFragmentManager(),
@@ -433,6 +449,27 @@ public class GameActivity extends ActionBarActivity {
         return random.nextInt(diceValue) + 1;
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent setIntent = new Intent(Intent.ACTION_MAIN);
+        setIntent.addCategory(Intent.CATEGORY_HOME);
+        setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(setIntent);
+    }
+
+    private boolean validatePlayerName(String playerName) {
+        boolean isUnique = true;
+        if (playerName.trim().equals("")) {
+            isUnique = false;
+        } else {
+            for (Player addedPlayers : mPlayerList) {
+                if (playerName.equals(addedPlayers.getPlayerName())) {
+                    isUnique = false;
+                }
+            }
+        }
+        return isUnique;
+    }
 
     protected TourGuide bindTourGuideButton(String bodyText, ImageView imageView) {
         ToolTip toolTip = new ToolTip()

@@ -45,5 +45,7 @@
     <string name="help_life">Ustaw startowe życie</string>
     <string name="help_person">Dodaj nowego zawodnika\n Żeby zmienić imię zawodnika naciśnij na nie</string>
     <string name="help_title">Pomoc</string>
+    <string name="dialog_fragment_error_name_empty">Nazwij zawodnika</string>
+    <string name="dialog_fragment_error_name_used">Ktoś już korzysta z wybranego imienia</string>
 
 </resources>
