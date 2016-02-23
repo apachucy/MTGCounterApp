@@ -26,7 +26,12 @@ public class CounterClass extends CountDownTimer {
 
     @Override
     public void onFinish() {
+        // display formated string
+        String hms = String.format(
+                "%02d:%02d:%02d", 0, 0, 0
+        );
 
+        mTextView.setText(hms);
     }
 
     @Override

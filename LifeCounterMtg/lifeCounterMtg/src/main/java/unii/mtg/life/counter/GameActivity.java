@@ -103,18 +103,29 @@ public class GameActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
-
-
-        // add default two players
-        int playerNumber = 1;
-        Player player1 = new Player(getString(R.string.item_player_name)
-                + playerNumber++);
-        Player player2 = new Player(getString(R.string.item_player_name)
-                + playerNumber);
         mPlayerList = new ArrayList<Player>();
-        mPlayerList.add(player1);
-        mPlayerList.add(player2);
+        sRunSettings = new GameSettings();
 
+        Intent openIntent = getIntent();
+        if (openIntent != null && openIntent.getExtras() != null && openIntent.getExtras().containsKey(BaseConfig.BUNDLE_KEY_PLAYERS_NAMES)) {
+            String[] draftPlayers = openIntent.getExtras().getStringArray(BaseConfig.BUNDLE_KEY_PLAYERS_NAMES);
+            for (int i = 0; i < draftPlayers.length; i++) {
+                mPlayerList.add(new Player(draftPlayers[i]));
+            }
+
+            if(openIntent.getExtras().containsKey(BaseConfig.BUNDLE_KEY_ROUND_TIME)){
+                sRunSettings.setGameTimeInMin(openIntent.getExtras().getInt(BaseConfig.BUNDLE_KEY_ROUND_TIME));
+            }
+        } else {
+            // add default two players
+            int playerNumber = 1;
+            Player player1 = new Player(getString(R.string.item_player_name)
+                    + playerNumber++);
+            Player player2 = new Player(getString(R.string.item_player_name)
+                    + playerNumber);
+            mPlayerList.add(player1);
+            mPlayerList.add(player2);
+        }
         mLifeList = new ArrayList<String>();
         mLifeList.add(BaseConfig.LIFE_20);
         mLifeList.add(BaseConfig.LIFE_30);
@@ -126,7 +137,6 @@ public class GameActivity extends ActionBarActivity {
         mDiceValues.add(BaseConfig.DICE_10);
         mDiceValues.add(BaseConfig.DICE_20);
 
-        sRunSettings = new GameSettings();
         mTimerStartButton.setOnClickListener(mOnTimerStart);
 
         mLayoutManager = new GridLayoutManager(this, 2);

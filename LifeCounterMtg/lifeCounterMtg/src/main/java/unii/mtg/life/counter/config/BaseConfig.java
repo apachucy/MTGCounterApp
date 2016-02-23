@@ -32,4 +32,10 @@ public class BaseConfig {
     public static final int ONE_POINT = 1;
     public static final int FIVE_POINTS = 5;
     public static final int GAME_OVER = 0;
+
+    /**
+     * Used to obtain data from different application
+     */
+    public static final String BUNDLE_KEY_PLAYERS_NAMES = "BUNDLE_KEY_PLAYERS_NAMES";
+    public static final String BUNDLE_KEY_ROUND_TIME = "BUNDLE_KEY_ROUND_TIME";
 }
