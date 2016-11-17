@@ -31,7 +31,7 @@
     <string name="dialog_fragment_timerMessage">Czas gry [m]:</string>
     <string name="dialog_fragment_changePlayerTitle">Zmień nazwę gracza</string>
     <string name="dialog_fragment_info_title">Informacje</string>
-    <string name="dialog_fragment_info_message">Fanowska wersja licznika życia MTG\nWykorzystano: ShowcaseLibrary\nGrafiki: Soqu </string>
+    <string name="dialog_fragment_info_message">Fanowska wersja licznika życia MTG\nWykorzystano: ShowcaseLibrary\nGrafiki: Piotr Semeniuk </string>
     <!-- help view  strings -->
     <string name="help_button_title">Rozpocznij odliczanie</string>
     <string name="help_button_message">Aby rozpocząć odliczanie do końca rundy\nnaciśnij przycisk</string>
@@ -47,5 +47,11 @@
     <string name="help_title">Pomoc</string>
     <string name="dialog_fragment_error_name_empty">Nazwij zawodnika</string>
     <string name="dialog_fragment_error_name_used">Ktoś już korzysta z wybranego imienia</string>
+    <string name="dialog_fragment_playerHint">Imię gracza</string>
+    <string name="dialog_fragment_timerHint">Domyślnie: 45m</string>
+    <string name="counters_energy">Energia</string>
+    <string name="counters_poison">Trucizna</string>
+    <string name="settings_counters">Ustaw dodatkowe konterki</string>
+    <string name="dialog_set_counters_title">Ustaw Dodatkowe Konterki</string>
 
 </resources>

@@ -10,7 +10,7 @@
         android:orderInCategory="100"
         android:title="@string/settings_startLife"
         app:actionViewClass="android.widget.ImageView"
-        app:showAsAction="always"></item>
+        app:showAsAction="always"/>
     <item
         android:id="@+id/settings_rollDice"
 
@@ -18,22 +18,25 @@
         android:orderInCategory="101"
         android:title="@string/settings_rollDice"
         app:actionViewClass="android.widget.ImageView"
-        app:showAsAction="always"></item>
+        app:showAsAction="always"/>
     <item
         android:id="@+id/settings_add_player"
         android:icon="@drawable/ic_person_add"
         android:orderInCategory="102"
         android:title="@string/settings_addPlayer"
         app:actionViewClass="android.widget.ImageView"
-        app:showAsAction="always"></item>
+        app:showAsAction="always"/>
     <item
         android:id="@+id/settings_gameTime"
         android:orderInCategory="103"
-        android:title="@string/settings_gameTime"></item>
+        android:title="@string/settings_gameTime"/>
 
     <item
         android:id="@+id/settings_info"
         android:orderInCategory="104"
-        android:title="@string/settings_info"></item>
-
+        android:title="@string/settings_info"/>
+    <item
+        android:id="@+id/settings_set_counters"
+        android:orderInCategory="105"
+        android:title="@string/settings_counters"/>
 </menu>

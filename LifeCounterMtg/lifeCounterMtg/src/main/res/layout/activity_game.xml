@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/background"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:keepScreenOn="true"
-    tools:context="${relativePackage}.${activityClass}">
+    android:fitsSystemWindows="true"
+    tools:context=".GameActivity">
 
     <view
         android:id="@+id/toolbar"
@@ -25,10 +25,11 @@
         android:paddingTop="@dimen/activity_vertical_margin">
 
         <RelativeLayout
-            android:id="@+id/activity_game_timerContainter"
+            android:id="@+id/activity_game_timerContainer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true">
 
             <Button
@@ -37,7 +38,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_marginRight="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
                 android:layout_marginTop="@dimen/button_margin"
                 android:text="@string/game_start_counting"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -59,7 +62,7 @@
             android:id="@+id/activity_game_playersRecyclerView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@+id/activity_game_timerContainter"
+            android:layout_below="@+id/activity_game_timerContainer"
             android:layout_marginTop="@dimen/text_view_margin"
             android:gravity="center"
             android:scrollbars="vertical" />

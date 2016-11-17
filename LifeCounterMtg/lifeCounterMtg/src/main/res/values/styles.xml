@@ -6,48 +6,39 @@
 
 
     -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-
-
-        -->
-        <!-- colorPrimary is used for the default action bar background -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
 
         <!-- colorPrimaryDark is used for the status bar -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">false</item>
 
         <!-- colorAccent is used as the default value for colorControlActivated,
              which is used to tint widgets -->
-        <item name="colorAccent">@color/accent</item>
+        <item name="colorAccent">@color/colorAccent</item>
 
         <item name="android:windowBackground">@color/windowBackground</item>
-        <item name="windowActionBar">false</item>
+        <item name="android:colorBackground">@color/windowBackground</item>
+
     </style>
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     <!-- Background for all views -->
-    <style name="background">
-        <item name="android:background">@color/windowBackground</item>
-    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="background.dialog">
-
-    </style>
-    
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <!-- Button Normal-->
     <style name="button" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/button_background</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:padding">@dimen/button_padding</item>
     </style>
-    
+
     <!-- Small Button -->
     <style name="buttonSmall" parent="@android:style/Widget.Button.Small">
         <item name="android:background">@drawable/button_background</item>
@@ -60,22 +51,8 @@
     </style>
     <!-- Text View -->
     <style name="textView" parent="@android:style/Widget.TextView">
-        <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="textView.dialog">
-        <item name="android:padding">@dimen/text_view_padding</item>
-        <item name="android:textColor">@color/blue_dark</item>
-        <item name="android:background">@color/windowBackground</item>
-    </style>
-    <!-- Edit Text -->
-    <style name="editText" parent="@android:style/Widget.EditText">
-        <item name="android:textColor">@color/black</item>
-    </style>
-    <!-- Edit Text for settings -->
-    <style name="editText.settings" >
-        <item name="android:layout_width">@dimen/settings_edit_text_width</item>
-    </style>
     <style name="toolbar">
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:textColor">@color/white</item>

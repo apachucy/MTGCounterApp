@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/item_player_playerNameTextView"
@@ -9,71 +9,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/text_view_margin"
         android:text="@string/item_player_name"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/item_player_playerLifeTextView"
-        style="@style/textView"
+    <include
+        android:id="@+id/player_life"
+        layout="@layout/item_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/item_player_playerNameTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/text_view_margin_small"
-        android:drawableLeft="@drawable/ic_life_small"
-        android:paddingBottom="@dimen/item_body_text_view_padding"
-        android:paddingTop="@dimen/item_body_text_view_padding"
-        android:text="@string/item_player_life"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_marginTop="@dimen/text_view_margin_small" />
 
-    <ImageView
-        android:id="@+id/item_player_playerLifeRemoveButton"
+    <include
+        android:id="@+id/player_poison"
+        layout="@layout/item_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/item_player_playerLifeTextView"
-        android:layout_marginRight="@dimen/image_view_margin"
-        android:layout_toLeftOf="@+id/item_player_playerLifeTextView"
-        android:src="@drawable/ic_minus_button" />
-
-    <ImageView
-        android:id="@+id/item_player_playerLifeAddButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/item_player_playerLifeTextView"
-        android:layout_marginLeft="@dimen/image_view_margin"
-        android:layout_toRightOf="@+id/item_player_playerLifeTextView"
-        android:src="@drawable/ic_add_button" />
-
-    <TextView
-        android:id="@+id/item_player_playerPoisonTextView"
-        style="@style/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/item_player_playerLifeRemoveButton"
+        android:layout_alignEnd="@id/player_life"
+        android:layout_alignLeft="@id/player_life"
+        android:layout_alignRight="@id/player_life"
+        android:layout_alignStart="@id/player_life"
+        android:layout_below="@+id/player_life"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/text_view_margin_small"
-        android:drawableLeft="@drawable/ic_poison_small"
-        android:paddingBottom="@dimen/item_body_text_view_padding"
-        android:paddingTop="@dimen/item_body_text_view_padding"
-        android:text="@string/item_player_poison"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_marginTop="@dimen/text_view_margin_small" />
 
-    <ImageView
-        android:id="@+id/item_player_playerPoisonRemoveButton"
+    <include
+        android:id="@+id/player_energy"
+        layout="@layout/item_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/item_player_playerLifeRemoveButton"
-        android:layout_alignTop="@+id/item_player_playerPoisonTextView"
-        android:src="@drawable/ic_minus_button" />
-
-    <ImageView
-        android:id="@+id/item_player_playerPoisonAddButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/item_player_playerLifeAddButton"
-        android:layout_alignTop="@+id/item_player_playerPoisonTextView"
-        android:src="@drawable/ic_add_button" />
+        android:layout_alignEnd="@id/player_life"
+        android:layout_alignLeft="@id/player_life"
+        android:layout_alignRight="@id/player_life"
+        android:layout_alignStart="@id/player_life"
+        android:layout_below="@+id/player_poison"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/text_view_margin_small" />
 
 </RelativeLayout>
