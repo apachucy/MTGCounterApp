@@ -114,7 +114,7 @@ public class GameActivity extends BaseActivity {
                 showInfoDialog(this, getString(R.string.dialog_fragment_info_title),
                         getString(R.string.dialog_fragment_info_message),
                         getString(R.string.help_button_action_end));
-
+                break;
             case R.id.settings_set_counters:
                 showMultipleChooserDialog(this, getString(R.string.dialog_set_counters_title),
                         mDisplayAdditionalCounters.countersToString(), mDisplayAdditionalCounters.getSelectedCounters(),

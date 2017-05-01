@@ -2,7 +2,7 @@
 <resources>
 
     <string name="warning_only_input_digits">Please input only digits</string>
-    <string name="app_name">MTG Life Counter</string>
+    <string name="app_name">Life Counter</string>
     <string name="item_player_name">Player</string>
     <string name="item_player_life">20</string>
     <string name="item_player_poison">0</string>
@@ -34,7 +34,7 @@
     <string name="dialog_fragment_timerHint">Default: 45m</string>
     <string name="dialog_fragment_changePlayerTitle">Change player name</string>
     <string name="dialog_fragment_info_title">Info</string>
-    <string name="dialog_fragment_info_message">Funsite version of Life counter for MTG game\nUsed: ShowcaseLibrary\nGraphic by: Piotr Semeniuk </string>
+    <string name="dialog_fragment_info_message">"Funsite version of Life counter for popular magic game\nUsed: ShowcaseLibrary\nGraphic by: Piotr Semeniuk "</string>
     <string name="dialog_fragment_error_name_used">Provided name is used</string>
     <string name="dialog_set_counters_title">Set Additional Counters</string>
     <string name="dialog_fragment_error_name_empty">Player need a name</string>
