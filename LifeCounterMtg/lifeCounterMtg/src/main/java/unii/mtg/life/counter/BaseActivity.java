@@ -2,6 +2,7 @@ package unii.mtg.life.counter;
 
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -9,7 +10,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import java.util.List;
 
 
-public class BaseActivity extends ActionBarActivity {
+public class BaseActivity extends AppCompatActivity {
 
 
     protected void showInputDigitsDialog(Context context, String title, String content, String hint, String lastValue, MaterialDialog.InputCallback inputCallback) {

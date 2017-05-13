@@ -35,4 +35,6 @@
 
     <!-- GridView -->
     <dimen name="vertical_spacing">5dp</dimen>
+    <!-- Toolbar elevation-->
+    <dimen name="toolbar_elevation">4dp</dimen>
 </resources>

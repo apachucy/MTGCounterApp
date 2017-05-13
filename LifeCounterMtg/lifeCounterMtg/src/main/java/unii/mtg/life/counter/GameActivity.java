@@ -50,6 +50,8 @@ import unii.mtg.life.counter.view.timer.CounterClass;
 public class GameActivity extends BaseActivity {
 
     public static final int MIN_GAME_LENGTH = 15;
+    private static final int DEFAULT_ELEMENT_CLICKED = -1;
+    private static GameSettings sRunSettings;
 
     private List<Player> mPlayerList;
 
@@ -60,13 +62,11 @@ public class GameActivity extends BaseActivity {
     private ArrayList<String> mLifeList;
     private ArrayList<String> mDiceValues;
 
-    private static GameSettings sRunSettings;
     private CounterClass mTimer;
     private DisplayAdditionalCounters mDisplayAdditionalCounters;
     // help library
     private TourGuide mTutorialHandler = null;
     private int mElementClicked = DEFAULT_ELEMENT_CLICKED;
-    private static final int DEFAULT_ELEMENT_CLICKED = -1;
     @Bind(R.id.activity_game_timerTextView)
     TextView mTimerTextView;
 
@@ -146,7 +146,7 @@ public class GameActivity extends BaseActivity {
     private void initData() {
         mPlayerList = new ArrayList<>();
         sRunSettings = new GameSettings();
-        //TODO: implement open from other application
+
         Intent openIntent = getIntent();
         if (isOpenFromOtherApplication(openIntent)) {
             setDataFromOtherApplication(openIntent);
@@ -188,8 +188,8 @@ public class GameActivity extends BaseActivity {
 
     private void setDataFromOtherApplication(Intent openIntent) {
         String[] draftPlayers = openIntent.getExtras().getStringArray(BaseConfig.BUNDLE_KEY_PLAYERS_NAMES);
-        for (int i = 0; i < draftPlayers.length; i++) {
-            mPlayerList.add(new Player(draftPlayers[i]));
+        for (String draftPlayer : draftPlayers) {
+            mPlayerList.add(new Player(draftPlayer));
         }
 
         if (openIntent.getExtras().containsKey(BaseConfig.BUNDLE_KEY_ROUND_TIME)) {

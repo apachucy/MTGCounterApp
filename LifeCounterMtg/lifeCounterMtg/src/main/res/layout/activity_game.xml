@@ -11,7 +11,8 @@
         android:id="@+id/toolbar"
         style="@style/toolbar"
         class="android.support.v7.widget.Toolbar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/toolbar_elevation"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />
 
