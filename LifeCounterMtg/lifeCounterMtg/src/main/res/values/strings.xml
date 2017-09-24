@@ -54,5 +54,5 @@
     <string name="help_dice">Roll a dice</string>
     <string name="help_person">Add new person\n To change player name press on chosen name</string>
     <string name="counters_poison">Poison</string>
-    <string name="counters_energy">Enegry</string>
+    <string name="counters_energy">Energy</string>
 </resources>
