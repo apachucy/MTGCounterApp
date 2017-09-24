@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.2.0_780c8db34032465f451d61467ebf565028389721.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.2.0_f43b2856a5c4831686c60d46ec119a36c9126fa3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\me.zhanghai.android.materialprogressbar\library\1.1.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2a24cba08e1d865a79e61335f5a1bd64d520106d">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\me.zhanghai.android.materialprogressbar-library-1.1.4_6e6e313d04418cf8c9268dc729e3cb735ea7b20a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.oguzdev\CircularFloatingActionMenu\1.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="607d961caf1a59b6e782724654c1f3229e036c20">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\com.oguzdev-CircularFloatingActionMenu-1.0.2_4404265c6e3aedb55264725f6e8aa7031a43acf8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.2.0_843ebca8874f8658c26fce0269b79bf81fd87d4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\SDK\extras\android\m2repository\com\android\support\support-annotations\23.2.0\support-annotations-23.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\support-annotations-23.2.0_02c183d82baf326a888587829724fa0181f26f2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\libs\internal_impl-23.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\internal_impl-23.2.0_3f8ccb50dbd152083767dc7bbd36c3d15570c79c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.github.worker8\tourguide\1.0.14-SNAPSHOT\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="35af7e9533758e83fd2864f0bc9ce14551c580ef">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\com.github.worker8-tourguide-1.0.14-SNAPSHOT_82eeb9b2c4b2a81b5dc6ba5ae65fba9fa7fec6a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Unii\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\butterknife-7.0.1_ef256bb740446048b520d5ac3f7f479ee2a602ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\net.i2p.android.ext\floatingactionbutton\1.9.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7c5e4db194c6ec3e62b70759ef913381ea4903d1">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\net.i2p.android.ext-floatingactionbutton-1.9.0_343ede0562e7099c85e0e19eae9303486ad24973.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Unii\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\library-2.4.0_a3cc3eaefa34d63a62a83f17fe287740d19c62c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.2.0_c7e94fe3efd4a1dc8333c6035e406ade9dc11fa2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.2.0_c1c920a0af3d0ec4bffa775eca145f1109b0476c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\exploded-aar\com.github.afollestad.material-dialogs\core\0.8.5.6\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1e9e758b0c20307810a65790e70261d4705a53a9">
+        <dex dex="G:\Workspace\Android Studio\MTGCounterApp\LifeCounterMtg\lifeCounterMtg\build\intermediates\pre-dexed\debug\com.github.afollestad.material-dialogs-core-0.8.5.6_7bf825b42b0aac15c7263731207a5ebabdf34f06.jar" />
+    </item>
+
+</items>

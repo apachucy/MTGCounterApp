@@ -41,6 +41,7 @@ import unii.mtg.life.counter.pojo.Player;
 import unii.mtg.life.counter.sharedpreferences.SettingsPreferencesFactory;
 import unii.mtg.life.counter.view.OnElementClick;
 import unii.mtg.life.counter.view.adapter.GridPlayersRecyclerAdapter;
+import unii.mtg.life.counter.view.menu.FabMenu;
 import unii.mtg.life.counter.view.timer.CounterClass;
 
 
@@ -78,6 +79,12 @@ public class GameActivity extends BaseActivity {
     @Bind(R.id.toolbar)
     Toolbar mToolBar;
 
+    private OnClickListener mLifeChangeActionListener;
+    private OnClickListener mDiceActionListener;
+    private OnClickListener mAddPlayerActionListener;
+    private OnClickListener mSetTimeActionListener;
+    private OnClickListener mAddCountersActionListener;
+    private FabMenu mFabMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +97,12 @@ public class GameActivity extends BaseActivity {
 
     }
 
+    /**
+     * TODO remove icon: ic_information_outline_white_36dp or add it to menu
+     *
+     * @param menu
+     * @return
+     */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -159,7 +172,54 @@ public class GameActivity extends BaseActivity {
         mDiceValues = new ArrayList<>();
         mDiceValues.addAll(DefaultStartGame.getDiceValueList());
         mDisplayAdditionalCounters = new DisplayAdditionalCounters(this);
+        mLifeChangeActionListener = new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showRadioButtonListDialog(GameActivity.this, getString(R.string.dialog_fragment_lifeTitle), mLifeList,
+                        getString(R.string.dialog_button_set), getString(R.string.dialog_button_cancel), 0, mSetLifeAtStartAction);
+            }
+        };
+        mDiceActionListener = new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showRadioButtonListDialog(GameActivity.this, getString(R.string.dialog_fragment_rollTitle), mDiceValues,
+                        getString(R.string.dialog_button_roll), getString(R.string.dialog_button_cancel), 0, mRollDiceAction);
+            }
+        };
+        mAddPlayerActionListener = new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showInputTextDialog(GameActivity.this, getString(R.string.dialog_fragment_playerTitle),
+                        getString(R.string.dialog_fragment_playerMessage),
+                        getString(R.string.dialog_fragment_playerHint), "", mAddPlayerAction);
 
+            }
+        };
+        mSetTimeActionListener = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showInputDigitsDialog(GameActivity.this, getString(R.string.dialog_fragment_timerTitle),
+                        getString(R.string.dialog_fragment_timerMessage), getString(R.string.dialog_fragment_timerHint),
+                        sRunSettings.getGameTimeInMin() + "", mTimerSetAction
+                );
+            }
+        };
+
+        mAddCountersActionListener = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showMultipleChooserDialog(GameActivity.this, getString(R.string.dialog_set_counters_title),
+                        mDisplayAdditionalCounters.countersToString(), mDisplayAdditionalCounters.getSelectedCounters(),
+                        getString(R.string.dialog_button_set), mListCallbackMultiChoice);
+
+            }
+        };
+        mFabMenu = new FabMenu(this, R.drawable.submenu_background, R.drawable.ic_add_button);
+        mFabMenu.addSubActionButton(R.drawable.ic_life, mLifeChangeActionListener);
+        mFabMenu.addSubActionButton(R.drawable.ic_dice, mDiceActionListener);
+        mFabMenu.addSubActionButton(R.drawable.ic_person_add, mAddPlayerActionListener);
+        mFabMenu.addSubActionButton(R.drawable.ic_timer_sand_empty_white_36dp, mSetTimeActionListener);
+        mFabMenu.addSubActionButton(R.drawable.ic_counter_white_36dp, mAddCountersActionListener);
     }
 
     private void initView() {
@@ -171,7 +231,7 @@ public class GameActivity extends BaseActivity {
         mRecyclerView.setAdapter(mPlayerRecyclerAdapter);
         mTimerTextView.setText(populateTimerAtStart((long) (sRunSettings
                 .getGameTimeInMin() * BaseConfig.DEFAULT_TIME_MINUT)));
-
+        mFabMenu.init();
     }
 
     private void initActionBar() {
@@ -249,6 +309,7 @@ public class GameActivity extends BaseActivity {
             }
         });
     }
+
 
     private String populateTimerAtStart(long millis) {
         return String.format(
