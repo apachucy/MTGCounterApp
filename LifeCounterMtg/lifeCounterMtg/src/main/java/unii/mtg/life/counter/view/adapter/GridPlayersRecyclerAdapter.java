@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
@@ -79,15 +79,15 @@ public class GridPlayersRecyclerAdapter extends RecyclerView.Adapter<GridPlayers
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.item_player_playerNameTextView)
+        @BindView(R.id.item_player_playerNameTextView)
         TextView playerNameTextView;
 
-        @Bind(R.id.player_life)
+        @BindView(R.id.player_life)
         View playerLifeView;
 
-        @Bind(R.id.player_poison)
+        @BindView(R.id.player_poison)
         View playerPoisonView;
-        @Bind(R.id.player_energy)
+        @BindView(R.id.player_energy)
         View playerEnergyView;
 
         private void setData(View view, int drawableIcon) {

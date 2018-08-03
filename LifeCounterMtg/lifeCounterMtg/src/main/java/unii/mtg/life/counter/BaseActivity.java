@@ -1,7 +1,6 @@
 package unii.mtg.life.counter;
 
 import android.content.Context;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 

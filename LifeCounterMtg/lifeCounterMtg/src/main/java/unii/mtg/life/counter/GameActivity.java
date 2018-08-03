@@ -24,9 +24,10 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 import tourguide.tourguide.Overlay;
 import tourguide.tourguide.Pointer;
 import tourguide.tourguide.Sequence;
@@ -52,6 +53,7 @@ public class GameActivity extends BaseActivity {
     public static final int MIN_GAME_LENGTH = 15;
     private static final int DEFAULT_ELEMENT_CLICKED = -1;
     private static GameSettings sRunSettings;
+    private Unbinder mUnbinder;
 
     private List<Player> mPlayerList;
 
@@ -67,15 +69,15 @@ public class GameActivity extends BaseActivity {
     // help library
     private TourGuide mTutorialHandler = null;
     private int mElementClicked = DEFAULT_ELEMENT_CLICKED;
-    @Bind(R.id.activity_game_timerTextView)
+    @BindView(R.id.activity_game_timerTextView)
     TextView mTimerTextView;
 
-    @Bind(R.id.activity_game_timerButton)
+    @BindView(R.id.activity_game_timerButton)
     Button mTimerStartButton;
-    @Bind(R.id.activity_game_playersRecyclerView)
+    @BindView(R.id.activity_game_playersRecyclerView)
     RecyclerView mRecyclerView;
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolBar;
 
 
@@ -83,7 +85,7 @@ public class GameActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        ButterKnife.bind(this);
+        mUnbinder = ButterKnife.bind(this);
         initData();
         initView();
         initActionBar();
@@ -264,6 +266,13 @@ public class GameActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mUnbinder != null) {
+            mUnbinder.unbind();
+        }
+    }
 
     private OnClickListener mOnTimerStart = new OnClickListener() {
 
